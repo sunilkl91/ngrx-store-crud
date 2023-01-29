@@ -1,0 +1,9 @@
+<!--create.component.html-->
+<div>
+  <input placeholder="name" name="name" [(ngModel)]="name">
+  <input placeholder="description" name="description" [(ngModel)]="description">
+  <button (click)="addHero(name, description);name='';description='';" *ngIf="id==0">Add Hero</button>
+  <button (click)="edit(name, description,id);name='';description='';"*ngIf="id>0">Edit Hero</button>
+</div>
+
+
